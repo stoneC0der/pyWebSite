@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My First Website{% endblock %} | using python</title>
+    {% block head %}{% endblock %}
+
+    <!-- @Favicons -->
+    <link rel="icon" sizes="any" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="/static/favicon.png" type="image/png" /> 
+    <!-- @Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- @Font-awesome Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm navbar-light fixed-top bg-dark">
+        <!--  NOTE:  navbar-expand to display nav-link inline, default is block -->
+		<div class="container">
+            
+            <a class="navbar-brand text-light" href="/"><i class="fab fa-python fa-1x text-warning mr-2"></i>PyWebsite</a>
+            <button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <!-- 
+                    NOTE:  collapse to hide element, navbar-collapse to show when navbar-expand is trigger
+                 -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/">
+                            Home 
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/contact">
+                            Contact
+                            <i class="fas fa-id-card-alt ml-1"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+		</div>
+    </nav>
+    <div class="content">{% block content %}{% endblock %}</div>
+	<footer class="bg-dark">
+        {% block footer %}
+            <div class="text-center p-5">
+                <span class="text-light">&copy; Copyright 2018 | stonecoder </span>
+            </div>
+        {% endblock %}
+	</footer>
+{% block script %}{% endblock %}
+	<!-- Custom JS -->
+	<!-- <script>
+		function code () {
+			codeground = document.getElementsByClassName('code-content')[0].innerHTML.split('\n');
+			codeContainer = document.getElementsByClassName('code-content')[0];
+			codeContainer.innerHTML = '';
+			//console.log(codeground.length);
+			
+			for(i = 0; i < codeground.length; i++) {
+				var line = codeground[i].substring(0, 1);
+				console.log(codeground[i].substring(0, 1));
+				if (line === '#') {
+					codeground[i] = '<span style="color: green; display:block">' + codeground[i] + '</span>';
+					console.log(codeground);
+					codeContainer.innerHTML += codeground[i];
+				}
+
+				if (line !== '#') {
+					codeground[i] = '<span style="color: #eee; display:block">' + codeground[i] + '</span>';
+					codeContainer.innerHTML += codeground[i];
+				}
+
+				
+			}
+		}
+    </script> -->
+    
+    <!-- Jquery.jst hen popper.js then bootstrap.js -->
+    <!-- @JQuery.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- @Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- @Bootstrap.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
