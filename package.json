@@ -1,0 +1,31 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "pywebsite",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stoneC0der/pyWebSite.git"
+  },
+  "keywords": [
+    "pyweb",
+    "pywesite",
+    "flask"
+  ],
+  "author": "cedric MEGNIE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stoneC0der/pyWebSite/issues"
+  },
+  "homepage": "https://github.com/stoneC0der/pyWebSite#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.12.0"
+  }
+}
