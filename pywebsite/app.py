@@ -40,7 +40,7 @@ def login() :
 
   # Validate the inpute values
   if _name  and _password:
-    if loginControl.login(_data) :
+    if loginControl.signIn(_data) :
       # _html = render('admin/index.html')
       # return json.dumps({'data' : _html})
       # return json.dumps({'html' : '<span class="bg-success">Welcome back' + _name + '!</span>'})
