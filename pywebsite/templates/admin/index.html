@@ -8,10 +8,11 @@
       <div class="card-header">
         <div class="d-flex justify-content-between">
           <div class="">
-            <span class="lead">Welcome back <a href="{{ url_for('profile', _username='seed') }}" >admin</a></span>
+            {{ session }}
+            <span class="lead">Welcome back <a href="{{ url_for('profile', _username=session._username) }}" >{{ session._username }}</a></span>
           </div>
           <div class="">
-            <span class="badge badge-pill badge-primary">admin</span>
+            <span class="badge badge-primary">admin</span>
           </div>
         </div>
       </div>
