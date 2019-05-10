@@ -49,6 +49,7 @@
                         </a>
                     </li>
                 </ul>
+                {% if '_username' not in session %}
                 <form class="form-row form-inline" id="loginForm">
                     <div class="col-auto input-group">
                         <div class="input-group-prepend">
@@ -70,6 +71,15 @@
                         </div>
                     </div>
                 </form>
+                {% else %}
+                  <div class="nav-item dropdown" >
+                      <a class="nav-link text-light dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ session._username }}</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                        <a href="{{ url_for('profile', _username=session._username) }}" class="dropdown-item">Profile</a>
+                        <a href="{{ url_for('logout') }}" class="dropdown-item">Logout</a>
+                      </div>
+                  </div>
+                {% endif %}
             </div>
             
 		</div>
