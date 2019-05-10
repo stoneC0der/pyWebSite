@@ -14,12 +14,12 @@ function login() {
       url: '/login',
       data: $('#loginForm').serialize(),
       success: function(response) {
-        console.log(response.status);
+        console.log(response);
         // $('.content').html(response);
         location.replace('/admin');
       },
       error: function(error) {
-        console.log(error.status);
+        console.log(error);
       },
     });
   });
